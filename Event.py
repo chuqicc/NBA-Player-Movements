@@ -81,7 +81,9 @@ class Event:
                               fontsize=Constant.FONTSIZE,
                               cellLoc='center')
         table.scale(1, Constant.SCALE)
-        table_cells = table.properties()['child_artists']
+        # print(table.properties())
+        table_cells = table.properties()['children']
+        # table_cells = table.properties()['child_artists']
         for cell in table_cells:
             cell._text.set_color('white')
 
